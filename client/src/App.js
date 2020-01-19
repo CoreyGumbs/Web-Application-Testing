@@ -36,17 +36,24 @@ class App extends React.Component{
         if(balls <=4){
           this.setState({[e.target.name]: this.state.balls + 1});
         }
+        break;
+      case 'fouls':
+        if(fouls < 2){
+          this.setState({[e.target.name]: this.state.fouls + 1});
+          this.setState({strikes: strikes + 1});
+        }
+        break;
       default: 
     }
   }
 
   render(){
-    const {strikes, balls} =  this.state;
+    const {strikes, balls, fouls} =  this.state;
     //console.log(strikes)
     return (
 
       <div className="App">
-          <Display strikes={strikes} balls={balls} />
+          <Display strikes={strikes} balls={balls} fouls={fouls} />
           <DashBoard handleAction={this.handleAction} />
       </div>
     );
