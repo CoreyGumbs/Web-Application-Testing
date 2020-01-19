@@ -11,13 +11,13 @@ class App extends React.Component{
       balls: 0,
       fouls: 0,
       outs: 0,
-      hit: false
+      hit: false   
     }
   }
 
   componentDidUpdate(prevProps, prevState){
       const {strikes, balls, outs, hit} = this.state;
-      if(strikes === 3 || balls === 4 | hit){
+      if(strikes === 3){
         this.setState({
           strikes: 0,
           balls: 0,
@@ -27,7 +27,25 @@ class App extends React.Component{
         });
       }
 
-      if(outs === 3 ){
+      if(balls === 4){
+        this.setState({
+          strikes: 0,
+          balls: 0,
+          fouls: 0, 
+          hit: false  
+        });
+      }
+
+      if(hit){
+        this.setState({
+          strikes: 0,
+          balls: 0,
+          fouls: 0, 
+          hit: false  
+        });
+      }
+
+      if(outs === 3){
         this.setState({
           strikes: 0,
           balls: 0,
@@ -65,7 +83,6 @@ class App extends React.Component{
         this.setState({[e.target.name]: true});
         break;
 
-
       default: 
     }
   }
@@ -74,7 +91,6 @@ class App extends React.Component{
     const {strikes, balls, fouls, outs, hit} =  this.state;
  
     return (
-
       <div className="App">
           <Display strikes={strikes} balls={balls} fouls={fouls} hit={hit} outs={outs} />
           <DashBoard handleAction={this.handleAction} />

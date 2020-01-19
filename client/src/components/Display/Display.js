@@ -1,16 +1,14 @@
 import React from 'react';
 
 
-const Display = ({strikes, balls, fouls, outs, hit}) => {
+const Display = ({strikes, balls, fouls, outs}) => {
     return(
-        <div>
+        <div className="display-container">
             Display
-            <p>Strike: {strikes}</p>
-            <p>Balls: {balls}</p>
-            <p>Fouls: {fouls}</p>
-            <p>Outs: {outs}</p>
-            {hit && 
-                <p>Player Got A Hit!!</p>}
+            <p className="display-content">Strike: {strikes}</p>
+            <p className="display-content">Balls: {balls}</p>
+            <p className="display-content">Fouls: {fouls}</p>
+            <p className="display-content">Outs: {outs}</p>
         </div>
     )
 }
