@@ -22,7 +22,7 @@ class App extends React.Component{
           strikes: 0,
           balls: 0,
           fouls: 0,
-          outs: outs + 1,
+          outs: prevState.outs + 1,
           hit: false
         });
       }
@@ -91,7 +91,7 @@ class App extends React.Component{
     const {strikes, balls, fouls, outs, hit} =  this.state;
  
     return (
-      <div className="App">
+      <div className="container">
           <Display strikes={strikes} balls={balls} fouls={fouls} hit={hit} outs={outs} />
           <DashBoard handleAction={this.handleAction} />
       </div>

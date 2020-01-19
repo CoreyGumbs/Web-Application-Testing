@@ -1,9 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
+afterEach(cleanup);
 
-  getByText(/dashboard/i);
+it('renders learn react link', () => {
+  const { getByText } = render(<App />);
+  getByText(/player's at bat/i);
+  getByText(/hit/i); 
 });
+
+

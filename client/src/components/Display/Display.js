@@ -4,11 +4,11 @@ import React from 'react';
 const Display = ({strikes, balls, fouls, outs}) => {
     return(
         <div className="display-container">
-            Display
-            <p className="display-content">Strike: {strikes}</p>
-            <p className="display-content">Balls: {balls}</p>
-            <p className="display-content">Fouls: {fouls}</p>
-            <p className="display-content">Outs: {outs}</p>
+            Player's At Bat
+            <p className="display-content" data-testid="display-content">Strikes: {strikes}</p>
+            <p className="display-content" data-testid="display-content">Balls: {balls}</p>
+            <p className="display-content" data-testid="display-content">Fouls: {fouls}</p>
+            <p className="display-content" data-testid="display-content">Outs: {outs}</p>
         </div>
     )
 }
