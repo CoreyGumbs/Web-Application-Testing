@@ -1,9 +1,12 @@
 import React from 'react';
 
-const DashBoard = () => {
+import ActionBtn from './ActionBtn';
+
+const DashBoard = ({handleAction}) => {
     return(
         <div>
-            Dashboard
+            Hello
+            <ActionBtn name={'strikes'} action={'strike'} handleAction={handleAction}/>
         </div>
     )
 }

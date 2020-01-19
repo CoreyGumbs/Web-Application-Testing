@@ -1,10 +1,12 @@
 import React from 'react';
 
 
-const Display = () => {
+const Display = ({strikes, balls}) => {
     return(
         <div>
             Display
+            <p>Strike: {strikes}</p>
+            <p>Balls: {balls}</p>
         </div>
     )
 }
