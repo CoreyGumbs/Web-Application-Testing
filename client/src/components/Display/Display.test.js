@@ -1,4 +1,5 @@
 import React from 'react';
+import '@testing-library/jest-dom'
 import { render, cleanup } from '@testing-library/react';
 import Display from './Display';
 
@@ -13,4 +14,5 @@ it('Display renders elements', () => {
     const pElements = getAllByTestId('display-content');
     expect(pElements).toHaveLength(4);
     expect(pElements[3]).toHaveTextContent(/outs/i);
+    
 });
