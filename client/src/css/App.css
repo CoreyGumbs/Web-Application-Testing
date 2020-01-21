@@ -1,0 +1,9 @@
+body {
+  font-size: 62.5%;
+}
+
+.container{
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid blue;
+}
